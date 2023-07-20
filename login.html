@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="travel.html" method="post" name="form" onsubmit="return validated()">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="text" placeholder="username" name="username" required>
+                <i class='bx bxs-user'></i>
+                
+
+            </div>
+            <div class="input-box">
+                <input type="password" required placeholder="password" name="password">
+                <i class='bx bxs-lock-alt' ></i>
+        
+            </div>
+            <button type="submit" class="btn">Login</button>
+          
+        
+        </form>
+
+    </div>
+    <script>
+        var username= document.form[ 'form']['username'];
+        var password= document.form['form']['password'];
+         
+        
+
+        username.addEventListener('textInput', username_verify);
+        password.addEventListener('textInput',password_verify);
+
+        function validated(){
+            if (username.value.length <10) {
+            return true;
+
+            if (password.value.length <4){
+            
+                return true;
+
+            }}
+        }
+        function username_verify(){
+            if(username.value.length>=10){
+                return true;
+            }
+            
+        }
+            function password_verify(){
+                if (password.value.length>=4)
+                return true;
+            }
+        
+
+    </script>
+    
+</body>
+</html>
